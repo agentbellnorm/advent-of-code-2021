@@ -1,23 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import one_a from './input/one_a.json';
 
 function App() {
+    const [msg, setMsg] = useState<string>();
+    useEffect(() => {
+        import('./rust/pkg').then((module) => {
+            let res = module.one_a(one_a.raw);
+            alert(res);
+            setMsg(res);
+        }).catch(() => {
+            setMsg("Error!!");
+        })
+    }, [])
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          {msg ?? null}
       </header>
     </div>
   );

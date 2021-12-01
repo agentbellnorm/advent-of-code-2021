@@ -11,6 +11,11 @@
 # production
 /build
 
+/src/rust/pkg
+/src/rust/target
+.idea/
+/pkg
+
 # misc
 .DS_Store
 .env.local
