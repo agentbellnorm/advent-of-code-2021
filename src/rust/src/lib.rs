@@ -2,32 +2,33 @@ use wasm_bindgen::prelude::wasm_bindgen;
 use web_sys::console::log_1 as log;
 extern crate console_error_panic_hook;
 use std::panic;
+mod one;
+mod two;
+mod util;
 
 #[wasm_bindgen]
-pub fn hello(name: &str) -> String {
-    log(&"from rust!".into());
-    return format!("Hello {}", &name);
+pub fn hello() {
+    log(&"Hello from the other side!".into());
+
+    panic::set_hook(Box::new(console_error_panic_hook::hook));
 }
 
 #[wasm_bindgen]
 pub fn one_a(input: &str) -> String {
-    panic::set_hook(Box::new(console_error_panic_hook::hook));
+    return one::a(input);
+}
 
-    let list: Vec<&str> = input.split("\n").collect();
+#[wasm_bindgen]
+pub fn one_b(input: &str) -> String {
+    return one::b(input);
+}
 
-    let mut increased = 0;
-    for (i, item) in list.iter().enumerate() {
-        let prev_index = (i as i32) - 1;
-        let current_num: i32 = item.parse().unwrap();
-        let mut prev_num: i32 = i32::MAX;
-        if prev_index >= 0 && list.get(prev_index as usize).is_some() {
-            prev_num = list.get(i - 1).unwrap().parse().unwrap();
-        }
+#[wasm_bindgen]
+pub fn two_a(input: &str) -> String {
+    return two::a(input);
+}
 
-        if current_num > prev_num {
-            increased = increased + 1;
-        }
-    }
-
-    return format!("{:?}", increased);
+#[wasm_bindgen]
+pub fn two_b(input: &str) -> String {
+    return two::b(input);
 }
