@@ -23,11 +23,9 @@ module.exports = {
         });
       });
 
-      console.log(webpackConfig);
-
       paths.appBuild = webpackConfig.output.path = path.resolve(
         __dirname,
-        "dist"
+        "docs"
       );
 
       return webpackConfig;
