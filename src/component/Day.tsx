@@ -1,12 +1,13 @@
 import React from "react";
 import useWasm, { WasmModule } from "../hooks/useWasm";
+import styles from "./Day.module.scss";
 
 type Props = {
   runA: (module: WasmModule) => string;
   runB: (module: WasmModule) => string;
-}
+};
 
-const Day = ({runA, runB}: Props) => {
+const Day = ({ runA, runB }: Props) => {
   const module = useWasm();
 
   if (!module) {
@@ -22,7 +23,7 @@ const Day = ({runA, runB}: Props) => {
   let durB = Date.now() - timeB;
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>A</h2>
       <p>Result: {resultA}</p>
       <p>Duration: {durA}ms</p>
