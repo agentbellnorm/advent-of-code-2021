@@ -1,7 +1,7 @@
 {
   "name": "aoc-2021",
   "version": "0.1.0",
-  "homepage": "https://agentbellnorm.github.io/aoc-2021",
+  "homepage": "https://agentbellnorm.github.io/aoc-2021/",
   "dependencies": {
     "@craco/craco": "^6.4.2",
     "@testing-library/jest-dom": "^5.11.4",
