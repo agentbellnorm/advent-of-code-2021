@@ -25,11 +25,11 @@ const Day = ({ runA, runB }: Props) => {
   return (
     <div className={styles.container}>
       <h2>A</h2>
-      <p>Result: {resultA}</p>
-      <p>Duration: {durA}ms</p>
+      <p>{resultA}</p>
+      <p>{durA} ms</p>
       <h2>B</h2>
-      <p>Result: {resultB}</p>
-      <p>Duration: {durB}ms</p>
+      <p>{resultB}</p>
+      <p>{durB} ms</p>
     </div>
   );
 };
