@@ -4,6 +4,7 @@ extern crate console_error_panic_hook;
 use std::panic;
 mod one;
 mod two;
+mod three;
 mod util;
 
 #[wasm_bindgen]
@@ -31,4 +32,14 @@ pub fn two_a(input: &str) -> String {
 #[wasm_bindgen]
 pub fn two_b(input: &str) -> String {
     return two::b(input);
+}
+
+#[wasm_bindgen]
+pub fn three_a(input: &str) -> String {
+    return three::a(input);
+}
+
+#[wasm_bindgen]
+pub fn three_b(input: &str) -> String {
+    return three::b(input);
 }

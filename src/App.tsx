@@ -4,6 +4,7 @@ import "./App.scss";
 import Day from "./component/Day";
 import one_a from "./input/one_a.json";
 import two_a from "./input/two_a.json";
+import three from "./input/three.json";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
           <div className="navLinks">
             <Link to="01">Day 1</Link>
             <Link to="02">Day 2</Link>
+            <Link to="03">Day 3</Link>
           </div>
           <Routes>
-            <Route path="/" element={<Navigate to="01" />} />
+            <Route path="/" element={<Navigate to="03" />} />
             <Route
               path="01"
               element={
@@ -31,6 +33,15 @@ function App() {
                 <Day
                   runA={(module) => module.two_a(two_a.raw)}
                   runB={(module) => module.two_b(two_a.raw)}
+                />
+              }
+            />
+            <Route
+              path="03"
+              element={
+                <Day
+                  runA={(module) => module.three_a(three.raw)}
+                  runB={(module) => module.three_b(three.raw)}
                 />
               }
             />
