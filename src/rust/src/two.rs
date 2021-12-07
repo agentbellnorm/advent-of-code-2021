@@ -36,7 +36,7 @@ pub fn b(input: &str) -> String {
     match instruction_tuple {
       ("forward", value) => {
         horizontal += value;
-        depth += (aim * value);
+        depth += aim * value;
       },
       ("down", value) => {
         aim += value;
