@@ -5,6 +5,7 @@ import Day from "./component/Day";
 import one_a from "./input/one_a.json";
 import two_a from "./input/two_a.json";
 import three from "./input/three.json";
+import four from "./input/four.json";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
             <Link to="01">Day 1</Link>
             <Link to="02">Day 2</Link>
             <Link to="03">Day 3</Link>
+            <Link to="04">Day 4</Link>
           </div>
           <Routes>
-            <Route path="/" element={<Navigate to="03" />} />
+            <Route path="/" element={<Navigate to="04" />} />
             <Route
               path="01"
               element={
@@ -42,6 +44,15 @@ function App() {
                 <Day
                   runA={(module) => module.three_a(three.raw)}
                   runB={(module) => module.three_b(three.raw)}
+                />
+              }
+            />
+            <Route
+              path="04"
+              element={
+                <Day
+                  runA={(module) => module.four_a(four.training)}
+                  runB={(module) => module.four_b(four.training)}
                 />
               }
             />
