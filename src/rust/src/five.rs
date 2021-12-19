@@ -64,18 +64,18 @@ fn get_line_t() {
 }
 
 fn get_line((x1, y1, x2, y2): PointPair) -> Vec<(i32, i32)> {
-    if x1 == x2 {
-        if y2 > y1 {
-            return (y1..(y2 + 1)).map(|y| (x1, y)).collect();
-        } else if y1 > y2 {
-            return (y2..(y1 + 1)).map(|y| (x1, y)).collect();
-        }
-    } else if y1 == y2 {
-        if x2 > x1 {
-            return (x1..(x2 + 1)).map(|x| (x, y1)).collect();
-        } else if x1 > x2 {
-            return (x2..(x1 + 1)).map(|x| (x, y1)).collect();
-        }
+    if x1 == x2 && y2 > y1 {
+        // S
+        return (y1..(y2 + 1)).map(|y| (x1, y)).collect();
+    } else if x1 == x2 && y1 > y2 {
+        // N
+        return (y2..(y1 + 1)).map(|y| (x1, y)).collect();
+    } else if y1 == y2 && x2 > x1 {
+        // E
+        return (x1..(x2 + 1)).map(|x| (x, y1)).collect();
+    } else if y1 == y2 && x1 > x2 {
+        // W
+        return (x2..(x1 + 1)).map(|x| (x, y1)).collect();
     } else if x2 > x1 && y2 < y1 {
         // NE
         return (1..(x2 - x1 + 1)).fold(vec![(x1, y1)], |mut acc, v| {
@@ -123,16 +123,16 @@ fn _print_world(world: &Vec<i32>, cols: i32) {
 }
 
 fn run(input: &str, include_diagonal: bool) -> usize {
-    let lines: Vec<PointPair> = split_lines(input)
+    let point_pairs: Vec<PointPair> = split_lines(input)
         .into_iter()
         .map(parse_line)
         .filter(|(x1, y1, x2, y2)| include_diagonal || x1 == x2 || y1 == y2)
         .collect();
-    let (x_max, y_max) = world_size(&lines);
+    let (x_max, y_max) = world_size(&point_pairs);
     let mut world: Vec<i32> = vec![0; (x_max * y_max) as usize];
 
-    for line in lines {
-        world = mark_lines(world, line, x_max);
+    for point_pair in point_pairs {
+        world = mark_lines(world, point_pair, x_max);
     }
 
     world
