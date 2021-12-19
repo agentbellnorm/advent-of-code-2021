@@ -19,3 +19,10 @@ pub fn int(string: &str) -> i32 {
         Err(_) => panic!("Could not parse {:?} to i32", string),
     }
 }
+
+pub fn int_big(string: &str) -> i64 {
+    match string.parse::<i64>() {
+        Ok(number) => number,
+        Err(_) => panic!("Could not parse {:?} to i64", string),
+    }
+}

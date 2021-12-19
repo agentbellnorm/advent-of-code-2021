@@ -6,6 +6,7 @@ use std::panic;
 mod five;
 mod four;
 mod one;
+mod six;
 mod three;
 mod two;
 mod util;
@@ -63,4 +64,13 @@ pub fn five_a(input: &str) -> String {
 #[wasm_bindgen]
 pub fn five_b(input: &str) -> String {
     return five::b(input);
+}
+
+#[wasm_bindgen]
+pub fn six_a(input: &str) -> String {
+    return six::a(input);
+}
+#[wasm_bindgen]
+pub fn six_b(input: &str) -> String {
+    return six::b(input);
 }
