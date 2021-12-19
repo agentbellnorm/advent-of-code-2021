@@ -52,7 +52,7 @@ function App() {
               element={
                 <Day
                   runA={(module) => module.four_a(four.raw)}
-                  runB={(module) => module.four_b(four.training)}
+                  runB={(module) => module.four_b(four.raw)}
                 />
               }
             />

@@ -1,16 +1,17 @@
 use wasm_bindgen::prelude::wasm_bindgen;
-use web_sys::console::log_1 as log;
 extern crate console_error_panic_hook;
+use crate::util::log_debug_js;
 use std::panic;
-mod one;
-mod two;
-mod three;
+
 mod four;
+mod one;
+mod three;
+mod two;
 mod util;
 
 #[wasm_bindgen]
 pub fn hello() {
-    log(&"Hello from the other side!".into());
+    log_debug_js(&"Hello from the other side!");
 
     panic::set_hook(Box::new(console_error_panic_hook::hook));
 }
