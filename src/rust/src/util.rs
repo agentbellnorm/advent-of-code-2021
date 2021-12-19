@@ -12,3 +12,10 @@ pub fn char_at(str: &str, i: i32) -> char {
 pub fn log_debug_js(debugable: &impl Debug) {
     log(&format!("{:?}", debugable).into());
 }
+
+pub fn int(string: &str) -> i32 {
+    match string.parse::<i32>() {
+        Ok(number) => number,
+        Err(_) => panic!("Could not parse {:?} to i32", string),
+    }
+}

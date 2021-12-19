@@ -6,6 +6,7 @@ import one_a from "./input/one_a.json";
 import two_a from "./input/two_a.json";
 import three from "./input/three.json";
 import four from "./input/four.json";
+import five from "./input/five.json";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
             <Link to="02">Day 2</Link>
             <Link to="03">Day 3</Link>
             <Link to="04">Day 4</Link>
+            <Link to="05">Day 5</Link>
           </div>
           <Routes>
-            <Route path="/" element={<Navigate to="04" />} />
+            <Route path="/" element={<Navigate to="05" />} />
             <Route
               path="01"
               element={
@@ -53,6 +55,15 @@ function App() {
                 <Day
                   runA={(module) => module.four_a(four.raw)}
                   runB={(module) => module.four_b(four.raw)}
+                />
+              }
+            />
+            <Route
+              path="05"
+              element={
+                <Day
+                  runA={(module) => module.five_a(five.real)}
+                  runB={(module) => module.five_b(five.real)}
                 />
               }
             />

@@ -64,6 +64,15 @@ fn parse_board(raw: &str) -> Board {
     return raw.split("\n").map(|row| parse_row(row)).collect();
 }
 
+fn _is_marked(board: &Vec<Vec<BoardCell>>, x: i32, y: i32) -> bool {
+    return board
+        .get(y as usize)
+        .unwrap()
+        .get(x as usize)
+        .unwrap()
+        .marked;
+}
+
 #[test]
 fn mark_board_t() {
     let mut board =
@@ -74,14 +83,14 @@ fn mark_board_t() {
     board = get_marked_board(board, "11");
     board = get_marked_board(board, "5");
 
-    assert!(is_marked(&board, 3, 0).eq(&true));
-    assert!(is_marked(&board, 3, 1).eq(&true));
-    assert!(is_marked(&board, 1, 2).eq(&true));
-    assert!(is_marked(&board, 4, 3).eq(&true));
-    assert!(is_marked(&board, 0, 0).eq(&false));
-    assert!(is_marked(&board, 0, 4).eq(&false));
-    assert!(is_marked(&board, 4, 0).eq(&false));
-    assert!(is_marked(&board, 4, 4).eq(&false));
+    assert!(_is_marked(&board, 3, 0).eq(&true));
+    assert!(_is_marked(&board, 3, 1).eq(&true));
+    assert!(_is_marked(&board, 1, 2).eq(&true));
+    assert!(_is_marked(&board, 4, 3).eq(&true));
+    assert!(_is_marked(&board, 0, 0).eq(&false));
+    assert!(_is_marked(&board, 0, 4).eq(&false));
+    assert!(_is_marked(&board, 4, 0).eq(&false));
+    assert!(_is_marked(&board, 4, 4).eq(&false));
 }
 
 #[test]
@@ -96,8 +105,6 @@ fn bingo_t() {
     board = get_marked_board(board, "21");
     board = get_marked_board(board, "14");
     board = get_marked_board(board, "16");
-
-    print_board(&board);
 
     assert!(is_bingo(&board))
 }
