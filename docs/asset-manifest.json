@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/aoc-2021/static/css/main.75296c30.chunk.css",
-    "main.js": "/aoc-2021/static/js/main.d8684acf.chunk.js",
-    "main.js.map": "/aoc-2021/static/js/main.d8684acf.chunk.js.map",
-    "runtime-main.js": "/aoc-2021/static/js/runtime-main.ba33cc49.js",
-    "runtime-main.js.map": "/aoc-2021/static/js/runtime-main.ba33cc49.js.map",
-    "static/js/2.ec3aa94a.chunk.js": "/aoc-2021/static/js/2.ec3aa94a.chunk.js",
-    "static/js/2.ec3aa94a.chunk.js.map": "/aoc-2021/static/js/2.ec3aa94a.chunk.js.map",
-    "static/js/3.a56c22a8.chunk.js": "/aoc-2021/static/js/3.a56c22a8.chunk.js",
-    "d7288a1272a5203988a8.module.wasm": "/aoc-2021/d7288a1272a5203988a8.module.wasm",
-    "static/js/3.a56c22a8.chunk.js.map": "/aoc-2021/static/js/3.a56c22a8.chunk.js.map",
-    "static/js/4.8d0cdc33.chunk.js": "/aoc-2021/static/js/4.8d0cdc33.chunk.js",
-    "static/js/4.8d0cdc33.chunk.js.map": "/aoc-2021/static/js/4.8d0cdc33.chunk.js.map",
+    "main.js": "/aoc-2021/static/js/main.22090524.chunk.js",
+    "main.js.map": "/aoc-2021/static/js/main.22090524.chunk.js.map",
+    "runtime-main.js": "/aoc-2021/static/js/runtime-main.96f04138.js",
+    "runtime-main.js.map": "/aoc-2021/static/js/runtime-main.96f04138.js.map",
+    "static/js/2.e629558d.chunk.js": "/aoc-2021/static/js/2.e629558d.chunk.js",
+    "static/js/2.e629558d.chunk.js.map": "/aoc-2021/static/js/2.e629558d.chunk.js.map",
+    "static/js/3.2c40608c.chunk.js": "/aoc-2021/static/js/3.2c40608c.chunk.js",
+    "9ff7adf4f44d7d1837ef.module.wasm": "/aoc-2021/9ff7adf4f44d7d1837ef.module.wasm",
+    "static/js/3.2c40608c.chunk.js.map": "/aoc-2021/static/js/3.2c40608c.chunk.js.map",
+    "static/js/4.8241ff9a.chunk.js": "/aoc-2021/static/js/4.8241ff9a.chunk.js",
+    "static/js/4.8241ff9a.chunk.js.map": "/aoc-2021/static/js/4.8241ff9a.chunk.js.map",
     "index.html": "/aoc-2021/index.html",
     "static/css/main.75296c30.chunk.css.map": "/aoc-2021/static/css/main.75296c30.chunk.css.map",
-    "static/js/2.ec3aa94a.chunk.js.LICENSE.txt": "/aoc-2021/static/js/2.ec3aa94a.chunk.js.LICENSE.txt"
+    "static/js/2.e629558d.chunk.js.LICENSE.txt": "/aoc-2021/static/js/2.e629558d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ba33cc49.js",
-    "static/js/2.ec3aa94a.chunk.js",
+    "static/js/runtime-main.96f04138.js",
+    "static/js/2.e629558d.chunk.js",
     "static/css/main.75296c30.chunk.css",
-    "static/js/main.d8684acf.chunk.js"
+    "static/js/main.22090524.chunk.js"
   ]
 }
