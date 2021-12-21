@@ -1,12 +1,8 @@
 use crate::util::int;
-use crate::util::log_debug_js;
-use std::collections::HashSet;
-use web_sys::console::log;
 
 pub fn a(input: &str) -> String {
     let positions: Vec<i32> = input.split(",").map(int).collect();
 
-    let mut optimal_position: i32 = i32::MAX;
     let mut minimum_fuel: i32 = i32::MAX;
 
     for position in &positions {
@@ -16,7 +12,6 @@ pub fn a(input: &str) -> String {
         }
 
         if fuel < minimum_fuel {
-            optimal_position = position.clone();
             minimum_fuel = fuel;
         }
     }
@@ -40,7 +35,6 @@ pub fn b(input: &str) -> String {
     let positions: Vec<i32> = input.split(",").map(int).collect();
     let max_position: i32 = positions.iter().cloned().max().unwrap();
 
-    let mut optimal_position: i32 = i32::MAX;
     let mut minimum_fuel: i32 = i32::MAX;
 
     for position in 0..max_position {
@@ -49,7 +43,6 @@ pub fn b(input: &str) -> String {
             fuel += calculate_fuel(position.clone(), other_position.clone())
         }
         if fuel < minimum_fuel {
-            optimal_position = position.clone();
             minimum_fuel = fuel;
         }
     }

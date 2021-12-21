@@ -3,6 +3,7 @@ extern crate console_error_panic_hook;
 use crate::util::log_debug_js;
 use std::panic;
 
+mod eight;
 mod five;
 mod four;
 mod one;
@@ -23,7 +24,6 @@ pub fn hello() {
 pub fn one_a(input: &str) -> String {
     return one::a(input);
 }
-
 #[wasm_bindgen]
 pub fn one_b(input: &str) -> String {
     return one::b(input);
@@ -33,7 +33,6 @@ pub fn one_b(input: &str) -> String {
 pub fn two_a(input: &str) -> String {
     return two::a(input);
 }
-
 #[wasm_bindgen]
 pub fn two_b(input: &str) -> String {
     return two::b(input);
@@ -43,7 +42,6 @@ pub fn two_b(input: &str) -> String {
 pub fn three_a(input: &str) -> String {
     return three::a(input);
 }
-
 #[wasm_bindgen]
 pub fn three_b(input: &str) -> String {
     return three::b(input);
@@ -83,4 +81,12 @@ pub fn seven_a(input: &str) -> String {
 #[wasm_bindgen]
 pub fn seven_b(input: &str) -> String {
     return seven::b(input);
+}
+#[wasm_bindgen]
+pub fn eight_a(input: &str) -> String {
+    return eight::a(input);
+}
+#[wasm_bindgen]
+pub fn eight_b(input: &str) -> String {
+    return eight::b(input);
 }
