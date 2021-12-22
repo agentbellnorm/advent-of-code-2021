@@ -10,6 +10,7 @@ mod nine;
 mod one;
 mod seven;
 mod six;
+mod ten;
 mod three;
 mod two;
 mod util;
@@ -23,81 +24,90 @@ pub fn hello() {
 
 #[wasm_bindgen]
 pub fn one_a(input: &str) -> String {
-    return one::a(input);
+    one::a(input)
 }
 #[wasm_bindgen]
 pub fn one_b(input: &str) -> String {
-    return one::b(input);
+    one::b(input)
 }
 
 #[wasm_bindgen]
 pub fn two_a(input: &str) -> String {
-    return two::a(input);
+    two::a(input)
 }
 #[wasm_bindgen]
 pub fn two_b(input: &str) -> String {
-    return two::b(input);
+    two::b(input)
 }
 
 #[wasm_bindgen]
 pub fn three_a(input: &str) -> String {
-    return three::a(input);
+    three::a(input)
 }
 #[wasm_bindgen]
 pub fn three_b(input: &str) -> String {
-    return three::b(input);
+    three::b(input)
 }
 
 #[wasm_bindgen]
 pub fn four_a(input: &str) -> String {
-    return four::a(input);
+    four::a(input)
 }
 #[wasm_bindgen]
 pub fn four_b(input: &str) -> String {
-    return four::b(input);
+    four::b(input)
 }
 
 #[wasm_bindgen]
 pub fn five_a(input: &str) -> String {
-    return five::a(input);
+    five::a(input)
 }
 #[wasm_bindgen]
 pub fn five_b(input: &str) -> String {
-    return five::b(input);
+    five::b(input)
 }
 
 #[wasm_bindgen]
 pub fn six_a(input: &str) -> String {
-    return six::a(input);
+    six::a(input)
 }
 #[wasm_bindgen]
 pub fn six_b(input: &str) -> String {
-    return six::b(input);
+    six::b(input)
 }
 
 #[wasm_bindgen]
 pub fn seven_a(input: &str) -> String {
-    return seven::a(input);
+    seven::a(input)
 }
 #[wasm_bindgen]
 pub fn seven_b(input: &str) -> String {
-    return seven::b(input);
+    seven::b(input)
 }
 
 #[wasm_bindgen]
 pub fn eight_a(input: &str) -> String {
-    return eight::a(input);
+    eight::a(input)
 }
 #[wasm_bindgen]
 pub fn eight_b(input: &str) -> String {
-    return eight::b(input);
+    eight::b(input)
 }
 
 #[wasm_bindgen]
 pub fn nine_a(input: &str) -> String {
-    return nine::a(input);
+    nine::a(input)
 }
 #[wasm_bindgen]
 pub fn nine_b(input: &str) -> String {
-    return nine::b(input);
+    nine::b(input)
+}
+
+#[wasm_bindgen]
+pub fn ten_a(input: &str) -> String {
+    ten::a(input)
+}
+#[wasm_bindgen]
+pub fn ten_b(input: &str) -> String {
+    ten::b(input)
 }

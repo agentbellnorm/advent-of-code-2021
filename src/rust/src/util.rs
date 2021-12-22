@@ -2,11 +2,11 @@ use std::fmt::Debug;
 use web_sys::console::log_1 as log;
 
 pub fn split_lines(s: &str) -> Vec<&str> {
-    return s.split("\n").collect();
+    s.split("\n").collect()
 }
 
 pub fn char_at(str: &str, i: i32) -> char {
-    return str.chars().nth(i as usize).unwrap();
+    str.chars().nth(i as usize).unwrap()
 }
 
 pub fn log_debug_js(debugable: &impl Debug) {
@@ -29,4 +29,9 @@ pub fn int_big(string: &str) -> i64 {
 
 pub fn get_index((x, y): (i32, i32), n_cols: i32) -> i32 {
     (y * n_cols) + x
+}
+
+pub fn print_ret<T: Debug>(v: T) -> T {
+    log_debug_js(&v);
+    v
 }
