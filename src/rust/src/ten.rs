@@ -1,6 +1,5 @@
-use crate::util::{log_debug_js, print_ret, split_lines};
+use crate::util::split_lines;
 use itertools::Itertools;
-use std::str::Chars;
 
 fn get_right(left: char) -> char {
     match left {
