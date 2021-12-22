@@ -2,9 +2,9 @@
 
 For 2021 I decided to go with Rust + WASM + Typescript.
 
-Solution source code lives [here](https://github.com/agentbellnorm/aoc-2021/tree/main/src/rust/src). 
+Solution source code lives [here](https://github.com/agentbellnorm/advent-of-code-2021/tree/main/src/rust/src). 
 
-This is a page that executes the solutions in your browser: https://agentbellnorm.github.io/aoc-2021/
+This is a page that executes the solutions in your browser: https://agentbellnorm.github.io/advent-of-code-2021/
 
 ## Available Scripts
 
