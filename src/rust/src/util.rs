@@ -26,3 +26,7 @@ pub fn int_big(string: &str) -> i64 {
         Err(_) => panic!("Could not parse {:?} to i64", string),
     }
 }
+
+pub fn get_index((x, y): (i32, i32), n_cols: i32) -> i32 {
+    (y * n_cols) + x
+}
