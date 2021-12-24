@@ -31,6 +31,10 @@ pub fn get_index((x, y): (i32, i32), n_cols: i32) -> i32 {
     (y * n_cols) + x
 }
 
+pub fn count_in_vec<T: Eq>(v: &Vec<T>, item: T) -> i32 {
+    v.into_iter().filter(|i| item.eq(i)).count() as i32
+}
+
 pub fn print_ret<T: Debug>(v: T) -> T {
     log_debug_js(&v);
     v

@@ -4,6 +4,7 @@ use crate::util::log_debug_js;
 use std::panic;
 
 mod eight;
+mod eleven;
 mod five;
 mod four;
 mod nine;
@@ -110,4 +111,13 @@ pub fn ten_a(input: &str) -> String {
 #[wasm_bindgen]
 pub fn ten_b(input: &str) -> String {
     ten::b(input)
+}
+
+#[wasm_bindgen]
+pub fn eleven_a(input: &str) -> String {
+    eleven::a(input)
+}
+#[wasm_bindgen]
+pub fn eleven_b(input: &str) -> String {
+    eleven::b(input)
 }
