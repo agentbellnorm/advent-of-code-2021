@@ -39,3 +39,9 @@ pub fn print_ret<T: Debug>(v: T) -> T {
     log_debug_js(&v);
     v
 }
+
+pub fn log_all_items<T: Debug>(v: &Vec<T>) {
+    for i in 0..v.len() {
+        log_debug_js(&v.get(i).unwrap());
+    }
+}

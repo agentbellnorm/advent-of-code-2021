@@ -13,6 +13,7 @@ mod seven;
 mod six;
 mod ten;
 mod three;
+mod twelve;
 mod two;
 mod util;
 
@@ -120,4 +121,13 @@ pub fn eleven_a(input: &str) -> String {
 #[wasm_bindgen]
 pub fn eleven_b(input: &str) -> String {
     eleven::b(input)
+}
+
+#[wasm_bindgen]
+pub fn twelve_a(input: &str) -> String {
+    twelve::a(input)
+}
+#[wasm_bindgen]
+pub fn twelve_b(input: &str) -> String {
+    twelve::b(input)
 }
